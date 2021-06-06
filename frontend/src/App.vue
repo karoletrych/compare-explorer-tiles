@@ -10,7 +10,7 @@
       :zoom="zoom"
       :center="center"
       @update:bounds="setBounds"
-      style="height: 500px; width: 100%"
+      style="height: 85%; width: 100%"
     >
       <l-tile-layer :url="url" :attribution="attribution" />
 
@@ -258,6 +258,12 @@ export default Vue.extend({
   top: 0;
   left: 0;
 }
+html, 
+body,
+#app {
+    height: 100%;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
