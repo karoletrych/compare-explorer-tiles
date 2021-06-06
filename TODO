@@ -1,0 +1,12 @@
+Essentials:
+- drawing tiles using openstreetmap
+
+- Strava auth
+- load followed users from strava
+- load activities from strava
+
+- computing tiles
+- coloring tiles based on owner (backend or frontend?)
+
+
+- finding max square
