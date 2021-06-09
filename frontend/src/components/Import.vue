@@ -1,10 +1,6 @@
 <template>
   <button>
-    <input
-      type="file"
-      @change="fileImported"
-      class="input-file"
-    />
+    <input type="file" @change="fileImported" class="input-file" />
     Import
   </button>
 </template>
@@ -16,16 +12,16 @@ export default {
     fileImported(e) {
       let file = e.target.files[0];
 
-      var reader = new FileReader();
+      let reader = new FileReader();
       reader.readAsText(file);
       reader.onload = this.processFile;
     },
     processFile(e) {
-      var file = e.target.result;
+      let file = e.target.result;
       let j = JSON.parse(file);
       this.$emit("file-imported", j);
-    },
-  },
+    }
+  }
 };
 </script>
 

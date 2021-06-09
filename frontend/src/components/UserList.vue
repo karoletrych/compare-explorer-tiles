@@ -21,23 +21,24 @@
         {{ i.total }}
       </td>
       <td>
-          <input type="color" v-model="i.color">
+        <input type="color" v-model="i.color" />
       </td>
     </tr>
   </table>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from "vue";
+
+export default Vue.extend({
   name: "UserList",
-  props:{
-      value: {type: Array}
+  props: {
+    value: { type: Array }
   },
   data() {
-    return {
-    };
-  },
-};
+    return {};
+  }
+});
 </script>
 
 <style>

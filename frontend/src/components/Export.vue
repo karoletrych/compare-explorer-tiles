@@ -9,17 +9,19 @@
 export default {
   name: "Export",
   props: {
-    content: { type: Array },
+    content: { type: Object }
   },
   methods: {
     download() {
-      var a = document.createElement("a");
-      var file = new Blob([JSON.stringify(this.content)], { type: "text/plain" });
+      let a = document.createElement("a");
+      let file = new Blob([JSON.stringify(this.content)], {
+        type: "text/plain"
+      });
       a.href = URL.createObjectURL(file);
       a.download = "routes.json";
       a.click();
-    },
-  },
+    }
+  }
 };
 </script>
 
