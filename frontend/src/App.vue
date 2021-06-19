@@ -18,7 +18,7 @@ import UserList from "./components/UserList.vue";
 import Import from "./components/Import.vue";
 import Export from "./components/Export.vue";
 import Map from "./components/Map.vue";
-import { tilesToLatLng } from "./Utils";
+import { tilesToLatLng, User } from "./Utils";
 
 
 let clientId = 62340;
@@ -32,15 +32,7 @@ let authUri =
   `approval_prompt=force&` +
   `scope=read,activity:read`;
 
-interface User {
-  show: boolean;
-  color: string;
-  name: string;
-  total: number;
-  tiles: any;
-  routes: any;
-  activities: number;
-}
+
 
 export default Vue.extend({
   name: "App",
@@ -96,20 +88,6 @@ export default Vue.extend({
   }
 });
 
-// function userTiles2tilesToUsers(userRoutePoints){
-//   let map = {}
-//   for(let user in userRoutePoints){
-//     userRoutePoints[user].forEach(p => {
-//       if(!map[p]){
-//         map[p] = [user]
-//       }
-//       else{
-//         map[p].push(user)
-//       }
-//     })
-//   }
-//   return map;
-// }
 </script>
 
 <style>

@@ -49,7 +49,7 @@ namespace backend
 
             var result = await response.Content.ReadAsAsync<Token>();
 
-            req.HttpContext.Response.Cookies.Append("token", result.AccessToken, new CookieOptions{Secure = true, SameSite = SameSiteMode.None});
+            req.HttpContext.Response.Cookies.Append("token", result.AccessToken, new CookieOptions { Secure = true, SameSite = SameSiteMode.None });
             return new RedirectResult(baseUri);
         }
 

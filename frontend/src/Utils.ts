@@ -3,6 +3,17 @@ interface Tile {
   y: number;
 }
 
+export interface User {
+    show: boolean;
+    color: string;
+    name: string;
+    total: number;
+    tiles: any;
+    routes: any;
+    activities: number;
+  }
+
+
 const DIV = Math.pow(2, 14);
 
 export function tile2long(t: number) {
